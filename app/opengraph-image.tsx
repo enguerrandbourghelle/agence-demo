@@ -35,9 +35,25 @@ export default function Image() {
             fontWeight: 600,
             textAlign: "center",
             maxWidth: 900,
+            marginBottom: 40,
           }}
         >
           Des sites web qui attirent vos clients
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            background: "white",
+            color: "#030712",
+            padding: "16px 32px",
+            borderRadius: 12,
+            fontSize: 24,
+            fontWeight: 600,
+          }}
+        >
+          Voir le site →
         </div>
       </div>
     ),
