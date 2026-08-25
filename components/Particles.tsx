@@ -52,7 +52,7 @@ export default function Particles() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-0 bg-gradient-to-br from-blue-950/30 via-gray-950 to-purple-950/20">
+    <div className="fixed inset-0 z-0 bg-gray-950">
       <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />
     </div>
   );
