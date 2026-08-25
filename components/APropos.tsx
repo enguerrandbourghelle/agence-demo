@@ -8,10 +8,13 @@ export default function APropos() {
           <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase">À propos</p>
           <h2 className="text-4xl font-bold mb-6 text-white">Enguerrand Bourghelle</h2>
           <p className="text-gray-400 mb-4">
-            Je suis développeur web freelance spécialisé dans la création de sites modernes pour les artisans et entreprises locales des Hauts-de-France.
+            Je suis développeur web freelance spécialisé dans la création de sites modernes pour les artisans et entreprises locales, partout en France. Chaque projet est pensé sur-mesure, en fonction de votre métier, de vos clients et de vos objectifs.
+          </p>
+          <p className="text-gray-400 mb-4">
+            Contrairement aux agences classiques, je travaille en direct avec vous, du premier échange jusqu&apos;à la mise en ligne. Pas d&apos;intermédiaire, pas de jargon technique inutile — juste un site qui fonctionne et qui vous ressemble.
           </p>
           <p className="text-gray-400 mb-8">
-            Mon objectif est simple : vous donner une présence en ligne professionnelle qui génère de vrais clients, sans vous ruiner.
+            Mon objectif est simple : vous donner une présence en ligne professionnelle qui génère de vrais clients, sans vous ruiner. Je m&apos;occupe de tout : design, référencement local, hébergement, et je reste disponible après la livraison pour vous accompagner.
           </p>
           <a href="#contact" className="bg-white text-black px-6 py-3 rounded-xl font-medium hover:bg-gray-100 transition">
             Me contacter
