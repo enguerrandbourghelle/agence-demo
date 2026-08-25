@@ -3,6 +3,7 @@ import Stats from "../components/Stats";
 import Services from "../components/Services";
 import APropos from "../components/APropos";
 import Portfolio from "../components/Portfolio";
+import Tarifs from "../components/Tarifs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Services />
       <APropos />
       <Portfolio />
+      <Tarifs />
       <Contact />
       <Footer />
     </main>
