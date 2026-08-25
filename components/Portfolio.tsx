@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Portfolio() {
   return (
-    <section className="py-24 px-6 bg-gray-950">
+    <section className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl font-bold text-center mb-4 text-white">Mes réalisations</h2>
