@@ -1,7 +1,8 @@
+import Navbar from "../components/Navbar";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-
+<Navbar />
       <section className="h-screen flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-6xl font-bold mb-6">
           Agence Web Enguerrand
