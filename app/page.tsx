@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Stats from "../components/Stats";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
@@ -13,10 +14,8 @@ export default function Home() {
           Agence Web — Hauts-de-France
         </p>
         <h1 className="text-6xl font-bold mb-6 max-w-4xl leading-tight text-white">
-  Des sites web qui attirent vos <span className="text-blue-400">clients</span>
-</h1>
-          
-        
+          Des sites web qui attirent vos <span className="text-blue-400">clients</span>
+        </h1>
         <p className="text-xl text-gray-400 max-w-2xl mb-10">
           Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
         </p>
@@ -24,6 +23,7 @@ export default function Home() {
           Demander un devis gratuit
         </a>
       </section>
+      <Stats />
       <Services />
       <Portfolio />
       <Contact />
