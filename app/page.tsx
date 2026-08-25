@@ -4,6 +4,7 @@ import Services from "../components/Services";
 import APropos from "../components/APropos";
 import Portfolio from "../components/Portfolio";
 import Tarifs from "../components/Tarifs";
+import Temoignages from "../components/Temoignages";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -30,6 +31,7 @@ export default function Home() {
       <APropos />
       <Portfolio />
       <Tarifs />
+      <Temoignages />
       <Contact />
       <Footer />
     </main>
