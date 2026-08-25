@@ -6,17 +6,17 @@ const font = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600
 
 export const metadata: Metadata = {
   title: "Agence WebArtisan — Création de sites web pour artisans",
-  description: "Je crée des sites web modernes, rapides et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
+  description: "Sites web modernes et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
   openGraph: {
     title: "Agence WebArtisan — Création de sites web pour artisans",
-    description: "Je crée des sites web modernes, rapides et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
+    description: "Sites web modernes et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Agence WebArtisan — Création de sites web pour artisans",
-    description: "Je crée des sites web modernes, rapides et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
+    description: "Sites web modernes et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
   },
 };
 
