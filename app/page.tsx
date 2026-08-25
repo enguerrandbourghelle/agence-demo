@@ -8,10 +8,12 @@ import Temoignages from "../components/Temoignages";
 import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Cursor from "../components/Cursor";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      <Cursor />
       <Navbar />
       <section className="h-screen flex flex-col items-center justify-center text-center px-6 bg-gray-950">
         <p className="text-sm font-medium text-gray-400 mb-6 tracking-widest uppercase">
