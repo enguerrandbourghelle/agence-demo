@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-        <span className="font-bold text-xl text-white">Agence Web</span>
+        <span className="font-bold text-xl text-white">Agence WebArtisan</span>
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => scrollTo("services")} className="text-gray-400 hover:text-white transition text-sm">Services</button>
           <button onClick={() => scrollTo("realisations")} className="text-gray-400 hover:text-white transition text-sm">Réalisations</button>
