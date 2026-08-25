@@ -8,7 +8,7 @@ export default function FAQ() {
     },
     {
       q: "En combien de temps est livré le site ?",
-      r: "7 jours ouvrés après validation du devis et réception de vos contenus (textes, photos, logo). Ce délai peut varier légèrement selon la complexité du projet, mais je vous tiens informé à chaque étape.",
+      r: "10 jours ouvrés après validation du devis et réception de vos contenus (textes, photos, logo). Ce délai peut varier légèrement selon la complexité du projet, mais je vous tiens informé à chaque étape.",
     },
     {
       q: "Est-ce que mon site sera visible sur Google ?",
