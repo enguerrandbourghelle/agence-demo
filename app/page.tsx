@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Navbar from "../components/Navbar";
+import PromoOffre from "../components/PromoOffre";
 import Stats from "../components/Stats";
 import Services from "../components/Services";
 import APropos from "../components/APropos";
@@ -54,6 +55,7 @@ export default function Home() {
             </button>
           </div>
         </section>
+        <PromoOffre />
         <Stats />
         <Services />
         <APropos />
