@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 
 export default function Particles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const mouse = useRef({ x: -1000, y: -1000 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -19,9 +20,9 @@ export default function Particles() {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        size: Math.random() * 2 + 0.5,
+        vx: (Math.random() - 0.5) * 0.9,
+        vy: (Math.random() - 0.5) * 0.9,
+        size: Math.random() * 3 + 1.5,
         opacity: Math.random() * 0.5 + 0.1,
       });
     }
@@ -29,10 +30,22 @@ export default function Particles() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles.forEach((p) => {
+        const dx = p.x - mouse.current.x;
+        const dy = p.y - mouse.current.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const radius = 150;
+
+        if (dist < radius) {
+          const force = (radius - dist) / radius;
+          p.x += (dx / dist) * force * 3;
+          p.y += (dy / dist) * force * 3;
+        }
+
         p.x += p.vx;
         p.y += p.vy;
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(96, 165, 250, ${p.opacity})`;
@@ -47,8 +60,16 @@ export default function Particles() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+    const handleMouseMove = (e: MouseEvent) => {
+      mouse.current.x = e.clientX;
+      mouse.current.y = e.clientY;
+    };
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return (
