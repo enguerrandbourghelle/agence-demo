@@ -34,7 +34,7 @@ export default function APropos() {
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-blue-400 text-2xl font-bold">02</span>
-                <p className="text-gray-300">Prix transparent — 1 000€ tout compris</p>
+                <p className="text-gray-300">Tarif transparent — devis gratuit sous 24h</p>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-blue-400 text-2xl font-bold">03</span>
