@@ -16,7 +16,9 @@ export default function Services() {
                 <Globe className="text-blue-400 w-6 h-6 group-hover:text-white transition-all duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Site vitrine</h3>
-              <p className="text-gray-400">Un site moderne et professionnel pour présenter votre activité et attirer des clients.</p>
+              <p className="text-gray-400">
+                Un site moderne et professionnel pour présenter votre activité et attirer des clients. Design sur-mesure adapté à votre métier, optimisé mobile, avec page d&apos;accueil, présentation de vos services, réalisations et formulaire de contact intégré. Livré clé en main en 7 jours.
+              </p>
             </div>
           </AnimatedSection>
           <AnimatedSection>
@@ -25,7 +27,9 @@ export default function Services() {
                 <Search className="text-blue-400 w-6 h-6 group-hover:text-white transition-all duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Référencement SEO</h3>
-              <p className="text-gray-400">Apparaissez en premier sur Google quand vos clients vous cherchent localement.</p>
+              <p className="text-gray-400">
+                Apparaissez en premier sur Google quand vos clients vous cherchent localement. Optimisation technique du site, mots-clés ciblés sur votre zone géographique, configuration de votre fiche Google Business pour apparaître sur Google Maps et dans les recherches locales.
+              </p>
             </div>
           </AnimatedSection>
           <AnimatedSection>
@@ -34,7 +38,9 @@ export default function Services() {
                 <Wrench className="text-blue-400 w-6 h-6 group-hover:text-white transition-all duration-300" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Maintenance</h3>
-              <p className="text-gray-400">Je gère votre site chaque mois — mises à jour, modifications et support inclus.</p>
+              <p className="text-gray-400">
+                Je gère votre site chaque mois — mises à jour, modifications de contenu, surveillance de la sécurité et de la performance. Vous m&apos;envoyez vos demandes, je m&apos;occupe du reste. Support réactif inclus, sans que vous ayez à toucher au code.
+              </p>
             </div>
           </AnimatedSection>
         </div>
