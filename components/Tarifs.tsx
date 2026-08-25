@@ -13,7 +13,7 @@ export default function Tarifs() {
           <AnimatedSection>
             <div className="bg-gray-900/50 rounded-2xl p-10 border border-gray-800">
               <h3 className="text-xl font-bold mb-2 text-white">Création de site</h3>
-              <p className="text-gray-400 mb-8">Site vitrine complet livré en 7 jours.</p>
+              <p className="text-gray-400 mb-8">Site vitrine complet livré en 10 jours.</p>
               <p className="text-5xl font-bold mb-8 text-white">1 000€ <span className="text-base font-normal text-gray-400">TTC</span></p>
               <ul className="flex flex-col gap-3 text-gray-400 text-sm">
                 <li>✅ Design moderne et responsive</li>
