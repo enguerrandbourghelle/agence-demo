@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Services from "../components/Services";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           Demander un devis gratuit
         </a>
       </section>
+      <Services />
     </main>
   );
 }
