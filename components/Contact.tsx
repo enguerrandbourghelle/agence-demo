@@ -13,16 +13,25 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Votre nom"
+              required
               className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
             />
             <input
               type="email"
               placeholder="Votre email"
+              required
+              className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
+            />
+            <input
+              type="tel"
+              placeholder="Votre numéro de téléphone"
+              required
               className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
             />
             <textarea
               placeholder="Décrivez votre projet..."
               rows={5}
+              required
               className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition resize-none"
             />
             <button
