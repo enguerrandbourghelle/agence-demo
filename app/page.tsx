@@ -5,6 +5,7 @@ import APropos from "../components/APropos";
 import Portfolio from "../components/Portfolio";
 import Tarifs from "../components/Tarifs";
 import Temoignages from "../components/Temoignages";
+import FAQ from "../components/FAQ";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -32,6 +33,7 @@ export default function Home() {
       <Portfolio />
       <Tarifs />
       <Temoignages />
+      <FAQ />
       <Contact />
       <Footer />
     </main>
