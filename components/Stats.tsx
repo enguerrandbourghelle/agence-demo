@@ -32,7 +32,7 @@ export default function Stats() {
     <section className="py-16 px-6 border-t border-white/5">
       <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <Counter target={7} suffix="j" />
+          <Counter target={10} suffix="j" />
           <p className="text-gray-400 text-sm">Délai de livraison</p>
         </div>
         <div>
