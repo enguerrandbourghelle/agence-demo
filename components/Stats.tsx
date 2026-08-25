@@ -40,8 +40,8 @@ export default function Stats() {
           <p className="text-gray-400 text-sm">Clients satisfaits</p>
         </div>
         <div>
-          <p className="text-4xl font-bold text-blue-400 mb-2">1 000€</p>
-          <p className="text-gray-400 text-sm">Prix tout compris</p>
+          <p className="text-4xl font-bold text-blue-400 mb-2">100%</p>
+          <p className="text-gray-400 text-sm">Sur-mesure</p>
         </div>
         <div>
           <Counter target={24} suffix="h" />
