@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 bg-gray-950">
+    <section id="contact" className="py-24 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <AnimatedSection>
           <h2 className="text-4xl font-bold mb-4 text-white">Parlons de votre projet</h2>
