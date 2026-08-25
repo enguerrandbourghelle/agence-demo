@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       </section>
       <Services />
       <Portfolio />
+      <Contact />
     </main>
   );
 }
