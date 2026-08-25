@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Stats from "../components/Stats";
 import Services from "../components/Services";
+import APropos from "../components/APropos";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
       </section>
       <Stats />
       <Services />
+      <APropos />
       <Portfolio />
       <Contact />
       <Footer />
