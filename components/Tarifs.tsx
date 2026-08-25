@@ -1,21 +1,26 @@
+"use client";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Tarifs() {
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="tarifs" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase text-center">Tarifs</p>
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">Des prix clairs et transparents</h2>
-          <p className="text-center text-gray-400 mb-16">Pas de surprise, tout est inclus.</p>
+          <h2 className="text-4xl font-bold text-center mb-4 text-white">Des offres adaptées à votre projet</h2>
+          <p className="text-center text-gray-400 mb-16">Contactez-moi pour un devis personnalisé et gratuit.</p>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection>
             <div className="bg-gray-900/50 rounded-2xl p-10 border border-gray-800">
               <h3 className="text-xl font-bold mb-2 text-white">Création de site</h3>
               <p className="text-gray-400 mb-8">Site vitrine complet livré en 10 jours.</p>
-              <p className="text-5xl font-bold mb-8 text-white">1 000€ <span className="text-base font-normal text-gray-400">TTC</span></p>
-              <ul className="flex flex-col gap-3 text-gray-400 text-sm">
+              <p className="text-4xl font-bold mb-8 text-white">Sur devis</p>
+              <ul className="flex flex-col gap-3 text-gray-400 text-sm mb-8">
                 <li>✅ Design moderne et responsive</li>
                 <li>✅ SEO local inclus</li>
                 <li>✅ Formulaire de contact</li>
@@ -23,14 +28,17 @@ export default function Tarifs() {
                 <li>✅ Nom de domaine + hébergement 1 an</li>
                 <li>✅ Formation incluse</li>
               </ul>
+              <button onClick={scrollToContact} className="w-full bg-white text-black py-3 rounded-xl font-medium hover:bg-gray-100 transition">
+                Demander un devis
+              </button>
             </div>
           </AnimatedSection>
           <AnimatedSection>
             <div className="bg-blue-950/30 rounded-2xl p-10 border border-blue-500/30">
               <h3 className="text-xl font-bold mb-2 text-white">Maintenance mensuelle</h3>
               <p className="text-gray-400 mb-8">Je gère tout, vous vous concentrez sur votre métier.</p>
-              <p className="text-5xl font-bold mb-8 text-white">89€ <span className="text-base font-normal text-gray-400">/ mois</span></p>
-              <ul className="flex flex-col gap-3 text-gray-400 text-sm">
+              <p className="text-4xl font-bold mb-8 text-white">Sur devis</p>
+              <ul className="flex flex-col gap-3 text-gray-400 text-sm mb-8">
                 <li>✅ 5 modifications par mois</li>
                 <li>✅ Surveillance du site</li>
                 <li>✅ Gestion fiche Google</li>
@@ -38,6 +46,9 @@ export default function Tarifs() {
                 <li>✅ Support prioritaire</li>
                 <li>✅ Sans engagement</li>
               </ul>
+              <button onClick={scrollToContact} className="w-full bg-white text-black py-3 rounded-xl font-medium hover:bg-gray-100 transition">
+                Demander un devis
+              </button>
             </div>
           </AnimatedSection>
         </div>
