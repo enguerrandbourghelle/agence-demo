@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Portfolio() {
@@ -11,8 +12,13 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection>
             <div className="rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50">
-              <div className="bg-gray-900 h-48 flex items-center justify-center border-b border-gray-800">
-                <span className="text-white text-lg font-bold">ADN Constructions</span>
+              <div className="relative h-48 border-b border-gray-800">
+                <Image
+                  src="/adn-constructions.jpg"
+                  alt="Site web ADN Constructions"
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">ADN Constructions</h3>
