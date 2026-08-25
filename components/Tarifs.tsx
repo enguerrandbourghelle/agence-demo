@@ -2,20 +2,20 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Tarifs() {
   return (
-    <section className="py-24 px-6 bg-gray-50">
+    <section className="py-24 px-6 bg-gray-950">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
-          <p className="text-sm font-medium text-blue-500 mb-4 tracking-widest uppercase text-center">Tarifs</p>
-          <h2 className="text-4xl font-bold text-center mb-4">Des prix clairs et transparents</h2>
-          <p className="text-center text-gray-500 mb-16">Pas de surprise, tout est inclus.</p>
+          <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase text-center">Tarifs</p>
+          <h2 className="text-4xl font-bold text-center mb-4 text-white">Des prix clairs et transparents</h2>
+          <p className="text-center text-gray-400 mb-16">Pas de surprise, tout est inclus.</p>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection>
-            <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold mb-2">Création de site</h3>
-              <p className="text-gray-500 mb-8">Site vitrine complet livré en 7 jours.</p>
-              <p className="text-5xl font-bold mb-8">1 000€ <span className="text-base font-normal text-gray-400">TTC</span></p>
-              <ul className="flex flex-col gap-3 text-gray-600 text-sm">
+            <div className="bg-gray-900/50 rounded-2xl p-10 border border-gray-800">
+              <h3 className="text-xl font-bold mb-2 text-white">Création de site</h3>
+              <p className="text-gray-400 mb-8">Site vitrine complet livré en 7 jours.</p>
+              <p className="text-5xl font-bold mb-8 text-white">1 000€ <span className="text-base font-normal text-gray-400">TTC</span></p>
+              <ul className="flex flex-col gap-3 text-gray-400 text-sm">
                 <li>✅ Design moderne et responsive</li>
                 <li>✅ SEO local inclus</li>
                 <li>✅ Formulaire de contact</li>
@@ -26,7 +26,7 @@ export default function Tarifs() {
             </div>
           </AnimatedSection>
           <AnimatedSection>
-            <div className="bg-gray-950 rounded-2xl p-10 shadow-sm border border-gray-800">
+            <div className="bg-blue-950/30 rounded-2xl p-10 border border-blue-500/30">
               <h3 className="text-xl font-bold mb-2 text-white">Maintenance mensuelle</h3>
               <p className="text-gray-400 mb-8">Je gère tout, vous vous concentrez sur votre métier.</p>
               <p className="text-5xl font-bold mb-8 text-white">89€ <span className="text-base font-normal text-gray-400">/ mois</span></p>
