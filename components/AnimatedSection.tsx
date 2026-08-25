@@ -11,11 +11,11 @@ export default function AnimatedSection({ children, className = "" }: { children
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("opacity-100", "translate-y-0");
-          el.classList.remove("opacity-0", "translate-y-8");
+          el.classList.add("opacity-100", "translate-y-0", "scale-100");
+          el.classList.remove("opacity-0", "translate-y-10", "scale-95");
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
     );
 
     observer.observe(el);
@@ -23,7 +23,7 @@ export default function AnimatedSection({ children, className = "" }: { children
   }, []);
 
   return (
-    <div ref={ref} className={`opacity-0 translate-y-8 transition-all duration-700 ease-out ${className}`}>
+    <div ref={ref} className={`opacity-0 translate-y-10 scale-95 transition-all duration-1000 ease-out ${className}`}>
       {children}
     </div>
   );
