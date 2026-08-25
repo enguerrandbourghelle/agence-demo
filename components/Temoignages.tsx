@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Temoignages() {
   return (
-    <section className="py-24 px-6 bg-gray-950">
+    <section className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase text-center">Témoignages</p>
