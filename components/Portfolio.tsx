@@ -16,7 +16,9 @@ export default function Portfolio() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">ADN Constructions</h3>
-                <p className="text-gray-400">Entreprise du bâtiment à Wambrechies — cloisons, plafonds, sanitaires et banques d&apos;accueil. SEO local, formulaire de devis, Google Business.</p>
+                <p className="text-gray-400">
+                  Entreprise du bâtiment dirigée par François Bourghelle, basée à Wambrechies et spécialisée dans les cloisons, plafonds, sanitaires et banques d&apos;accueil pour les professionnels. Le site présente leur savoir-faire, leurs réalisations et permet aux clients de demander un devis en ligne. Fiche Google Business configurée pour améliorer leur visibilité locale, et formulaire de contact connecté directement à leur boîte mail.
+                </p>
               </div>
             </div>
           </AnimatedSection>
@@ -27,7 +29,7 @@ export default function Portfolio() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">Votre entreprise</h3>
-                <p className="text-gray-400">Vous souhaitez apparaître ici ? Contactez-moi pour discuter de votre projet.</p>
+                <p className="text-gray-400">Vous souhaitez apparaître ici ? Contactez-moi pour discuter de votre projet et voir comment un site sur-mesure peut vous aider à attirer plus de clients.</p>
               </div>
             </div>
           </AnimatedSection>
