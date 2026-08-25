@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Agence WebArtisan — Création de sites web pour artisans",
     description: "Sites web modernes et optimisés pour les artisans et entreprises locales, partout en France. Devis gratuit sous 24h.",
+    siteName: "Agence WebArtisan",
     locale: "fr_FR",
     type: "website",
   },
