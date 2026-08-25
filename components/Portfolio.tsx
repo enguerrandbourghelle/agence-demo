@@ -16,7 +16,7 @@ export default function Portfolio() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white">ADN Constructions</h3>
-                <p className="text-gray-400">Site vitrine pour une entreprise de couverture à Marcq-en-Barœul. SEO local, formulaire de devis, Google Business.</p>
+                <p className="text-gray-400">Entreprise du bâtiment à Wambrechies — cloisons, plafonds, sanitaires et banques d&apos;accueil. SEO local, formulaire de devis, Google Business.</p>
               </div>
             </div>
           </AnimatedSection>
