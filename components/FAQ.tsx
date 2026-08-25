@@ -4,7 +4,7 @@ export default function FAQ() {
   const questions = [
     {
       q: "Combien coûte un site web ?",
-      r: "1 000€ TTC tout compris — domaine, hébergement 1 an, design sur-mesure, SEO local et formation à l'utilisation de votre site sont inclus dans ce prix. Aucun frais caché ne s'ajoutera en cours de projet.",
+      r: "Le tarif dépend de votre projet et de vos besoins spécifiques. Je vous propose un devis gratuit et personnalisé sous 24h, sans engagement — domaine, hébergement 1 an, design sur-mesure, SEO local et formation à l'utilisation de votre site sont inclus dans chaque offre.",
     },
     {
       q: "En combien de temps est livré le site ?",
@@ -15,8 +15,8 @@ export default function FAQ() {
       r: "Oui, le SEO local est inclus dans chaque création de site : optimisation des balises, mots-clés ciblés sur votre zone géographique et configuration de votre fiche Google Business. Le référencement prend généralement quelques semaines pour se mettre en place après la mise en ligne.",
     },
     {
-      q: "Que comprend la maintenance à 89€/mois ?",
-      r: "5 modifications de contenu par mois (textes, photos, tarifs), surveillance technique du site, gestion de votre fiche Google Business, et un rapport mensuel sur les visites et la performance. Vous n'avez rien à gérer techniquement.",
+      q: "Que comprend la maintenance mensuelle ?",
+      r: "Des modifications de contenu régulières (textes, photos, tarifs), surveillance technique du site, gestion de votre fiche Google Business, et un rapport mensuel sur les visites et la performance. Vous n'avez rien à gérer techniquement. Le tarif est adapté à vos besoins.",
     },
     {
       q: "Est-ce que je peux arrêter la maintenance ?",
