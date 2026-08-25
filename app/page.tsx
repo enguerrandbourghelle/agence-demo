@@ -18,7 +18,7 @@ export default function Home() {
   const eyebrowRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const btnRef = useRef<HTMLAnchorElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -27,6 +27,10 @@ export default function Home() {
       { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
     );
   }, []);
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <main className="min-h-screen relative">
@@ -37,7 +41,7 @@ export default function Home() {
         <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
           <div className="relative z-10 flex flex-col items-center">
             <p ref={eyebrowRef} className="text-sm font-medium text-gray-400 mb-6 tracking-widest uppercase opacity-0">
-              Agence Web — Hauts-de-France
+              Agence WebArtisan — France
             </p>
             <h1 ref={titleRef} className="text-6xl font-bold mb-6 max-w-4xl leading-tight text-white opacity-0">
               Des sites web qui attirent vos <span className="text-blue-400">clients</span>
@@ -45,9 +49,9 @@ export default function Home() {
             <p ref={subtitleRef} className="text-xl text-gray-400 max-w-2xl mb-10 opacity-0">
               Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
             </p>
-            <a ref={btnRef} href="#contact" className="bg-white text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-gray-100 transition opacity-0">
+            <button ref={btnRef} onClick={scrollToContact} className="bg-white text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-gray-100 transition opacity-0">
               Demander un devis gratuit
-            </a>
+            </button>
           </div>
         </section>
         <Stats />
