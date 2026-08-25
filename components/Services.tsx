@@ -17,7 +17,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-bold mb-3 text-white">Site vitrine</h3>
               <p className="text-gray-400">
-                Un site moderne et professionnel pour présenter votre activité et attirer des clients. Design sur-mesure adapté à votre métier, optimisé mobile, avec page d&apos;accueil, présentation de vos services, réalisations et formulaire de contact intégré. Livré clé en main en 7 jours.
+                Un site moderne et professionnel pour présenter votre activité et attirer des clients. Design sur-mesure adapté à votre métier, optimisé mobile, avec page d&apos;accueil, présentation de vos services, réalisations et formulaire de contact intégré. Livré clé en main en 10 jours.
               </p>
             </div>
           </AnimatedSection>
