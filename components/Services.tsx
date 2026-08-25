@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Services() {
   return (
-    <section className="py-24 px-6">
+    <section id="services" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl font-bold text-center mb-4 text-white">Mes services</h2>

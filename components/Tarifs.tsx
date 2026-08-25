@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Tarifs() {
   return (
-    <section className="py-24 px-6">
+    <section id="tarifs" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase text-center">Tarifs</p>
