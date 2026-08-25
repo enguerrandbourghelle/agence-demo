@@ -51,5 +51,10 @@ export default function Particles() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0" />;
+  return (
+  <>
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-gray-950 to-purple-950/20 animate-pulse" />
+    <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none z-0" />
+  </>
+);
 }
