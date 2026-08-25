@@ -1,3 +1,5 @@
+import AnimatedSection from "./AnimatedSection";
+
 export default function FAQ() {
   const questions = [
     { q: "Combien coûte un site web ?", r: "1 000€ TTC tout compris — domaine, hébergement, SEO et formation inclus." },
@@ -10,14 +12,18 @@ export default function FAQ() {
   return (
     <section className="py-24 px-6 bg-gray-50">
       <div className="max-w-3xl mx-auto">
-        <p className="text-sm font-medium text-blue-500 mb-4 tracking-widest uppercase text-center">FAQ</p>
-        <h2 className="text-4xl font-bold text-center mb-16">Questions fréquentes</h2>
+        <AnimatedSection>
+          <p className="text-sm font-medium text-blue-500 mb-4 tracking-widest uppercase text-center">FAQ</p>
+          <h2 className="text-4xl font-bold text-center mb-16">Questions fréquentes</h2>
+        </AnimatedSection>
         <div className="flex flex-col gap-4">
           {questions.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl p-8">
-              <p className="font-bold text-gray-900 mb-3">{item.q}</p>
-              <p className="text-gray-500">{item.r}</p>
-            </div>
+            <AnimatedSection key={i}>
+              <div className="bg-white rounded-2xl p-8">
+                <p className="font-bold text-gray-900 mb-3">{item.q}</p>
+                <p className="text-gray-500">{item.r}</p>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
