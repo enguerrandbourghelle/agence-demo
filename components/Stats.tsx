@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
 
   useEffect(() => {
@@ -24,28 +24,37 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
     return () => observer.disconnect();
   }, [target]);
 
-  return <p ref={ref} className="font-serif text-4xl font-bold text-white mb-2">{count}{suffix}</p>;
+  return <span ref={ref}>{count}{suffix}</span>;
 }
 
 export default function Stats() {
   return (
-    <section className="py-16 px-6 border-t border-white/5">
-      <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div>
-          <Counter target={10} suffix="j" />
-          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Délai de livraison</p>
+    <section className="py-20 px-6 md:px-16 border-t border-white/5">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-4">
+        <div className="flex flex-col">
+          <span className="font-serif text-6xl md:text-7xl font-bold text-white leading-none">
+            <Counter target={10} suffix="j" />
+          </span>
+          <span className="font-mono text-xs text-gray-500 mt-2 uppercase tracking-wider">Délai livraison</span>
         </div>
-        <div>
-          <Counter target={100} suffix="%" />
-          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Clients satisfaits</p>
+        <div className="hidden md:block w-px h-16 bg-gray-800" />
+        <div className="flex flex-col">
+          <span className="font-serif text-4xl md:text-5xl font-bold text-gray-400 leading-none">
+            <Counter target={100} suffix="%" />
+          </span>
+          <span className="font-mono text-xs text-gray-500 mt-2 uppercase tracking-wider">Clients satisfaits</span>
         </div>
-        <div>
-          <p className="font-serif text-4xl font-bold text-amber-500 mb-2">100%</p>
-          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Sur-mesure</p>
+        <div className="hidden md:block w-px h-16 bg-gray-800" />
+        <div className="flex flex-col">
+          <span className="font-serif text-4xl md:text-5xl font-bold text-amber-500 leading-none">100%</span>
+          <span className="font-mono text-xs text-gray-500 mt-2 uppercase tracking-wider">Sur-mesure</span>
         </div>
-        <div>
-          <Counter target={24} suffix="h" />
-          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Réponse garantie</p>
+        <div className="hidden md:block w-px h-16 bg-gray-800" />
+        <div className="flex flex-col">
+          <span className="font-serif text-4xl md:text-5xl font-bold text-gray-400 leading-none">
+            <Counter target={24} suffix="h" />
+          </span>
+          <span className="font-mono text-xs text-gray-500 mt-2 uppercase tracking-wider">Réponse garantie</span>
         </div>
       </div>
     </section>
