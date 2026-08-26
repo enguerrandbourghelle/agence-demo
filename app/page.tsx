@@ -16,6 +16,7 @@ import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
 import MagneticButton from "../components/MagneticButton";
 import ScrollProgress from "../components/ScrollProgress";
+import SmoothScroll from "../components/SmoothScroll";
 
 export default function Home() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -60,46 +61,48 @@ export default function Home() {
   const titleWords = ["Des", "sites", "web", "qui", "attirent", "vos"];
 
   return (
-    <main className="min-h-screen relative">
-      <Particles />
-      <div className="relative z-10">
-        <Cursor />
-        <ScrollProgress />
-        <Navbar />
-        <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden">
-          <div className="relative z-10 max-w-5xl">
-            <p className="font-mono text-sm text-amber-500 mb-8 h-5">
-              {typedText}
-              <span className="inline-block w-2 h-4 bg-amber-500 ml-1 animate-pulse" />
-            </p>
-            <h1 ref={titleRef} className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-[0.95] text-white" style={{ perspective: 800 }}>
-              {titleWords.map((w, i) => (
-                <span key={i} className="word inline-block mr-4 opacity-0">{w}</span>
-              ))}
-              <br />
-              <span className="word inline-block text-amber-500 italic opacity-0">clients</span>
-            </h1>
-            <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
-              Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
-            </p>
-            <div ref={btnWrapRef} className="opacity-0 inline-block">
-              <MagneticButton onClick={scrollToContact} className="bg-amber-500 text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-400">
-                Demander un devis gratuit
-              </MagneticButton>
+    <SmoothScroll>
+      <main className="min-h-screen relative">
+        <Particles />
+        <div className="relative z-10">
+          <Cursor />
+          <ScrollProgress />
+          <Navbar />
+          <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden">
+            <div className="relative z-10 max-w-5xl">
+              <p className="font-mono text-sm text-amber-500 mb-8 h-5">
+                {typedText}
+                <span className="inline-block w-2 h-4 bg-amber-500 ml-1 animate-pulse" />
+              </p>
+              <h1 ref={titleRef} className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-[0.95] text-white" style={{ perspective: 800 }}>
+                {titleWords.map((w, i) => (
+                  <span key={i} className="word inline-block mr-4 opacity-0">{w}</span>
+                ))}
+                <br />
+                <span className="word inline-block text-amber-500 italic opacity-0">clients</span>
+              </h1>
+              <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
+                Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
+              </p>
+              <div ref={btnWrapRef} className="opacity-0 inline-block">
+                <MagneticButton onClick={scrollToContact} className="bg-amber-500 text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-400">
+                  Demander un devis gratuit
+                </MagneticButton>
+              </div>
             </div>
-          </div>
-        </section>
-        <PromoOffre />
-        <Stats />
-        <Services />
-        <APropos />
-        <Portfolio />
-        <Tarifs />
-        <Temoignages />
-        <FAQ />
-        <Contact />
-        <Footer />
-      </div>
-    </main>
+          </section>
+          <PromoOffre />
+          <Stats />
+          <Services />
+          <APropos />
+          <Portfolio />
+          <Tarifs />
+          <Temoignages />
+          <FAQ />
+          <Contact />
+          <Footer />
+        </div>
+      </main>
+    </SmoothScroll>
   );
 }
