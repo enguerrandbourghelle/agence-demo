@@ -24,7 +24,7 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
     return () => observer.disconnect();
   }, [target]);
 
-  return <p ref={ref} className="text-4xl font-bold text-white mb-2">{count}{suffix}</p>;
+  return <p ref={ref} className="font-serif text-4xl font-bold text-white mb-2">{count}{suffix}</p>;
 }
 
 export default function Stats() {
@@ -33,19 +33,19 @@ export default function Stats() {
       <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
           <Counter target={10} suffix="j" />
-          <p className="text-gray-400 text-sm">Délai de livraison</p>
+          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Délai de livraison</p>
         </div>
         <div>
           <Counter target={100} suffix="%" />
-          <p className="text-gray-400 text-sm">Clients satisfaits</p>
+          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Clients satisfaits</p>
         </div>
         <div>
-          <p className="text-4xl font-bold text-blue-400 mb-2">100%</p>
-          <p className="text-gray-400 text-sm">Sur-mesure</p>
+          <p className="font-serif text-4xl font-bold text-amber-500 mb-2">100%</p>
+          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Sur-mesure</p>
         </div>
         <div>
           <Counter target={24} suffix="h" />
-          <p className="text-gray-400 text-sm">Réponse garantie</p>
+          <p className="font-mono text-gray-400 text-xs uppercase tracking-wider">Réponse garantie</p>
         </div>
       </div>
     </section>
