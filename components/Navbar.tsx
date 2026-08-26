@@ -1,8 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollTo = (id: string) => {
     setOpen(false);
@@ -11,12 +18,18 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur-md border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-        <span className="font-serif font-bold text-xl text-white">Agence WebArtisan</span>
-        <div className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollTo("services")} className="text-gray-400 hover:text-amber-500 transition text-sm">Services</button>
-          <button onClick={() => scrollTo("realisations")} className="text-gray-400 hover:text-amber-500 transition text-sm">Réalisations</button>
-          <button onClick={() => scrollTo("tarifs")} className="text-gray-400 hover:text-amber-500 transition text-sm">Tarifs</button>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-16 py-5 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "bg-gray-950/80 backdrop-blur-md border-b border-gray-800" : "bg-transparent"
+        }`}
+      >
+        <span className="font-serif font-bold text-xl text-white">
+          Agence<span className="text-amber-500">WebArtisan</span>
+        </span>
+        <div className="hidden md:flex items-center gap-10">
+          <button onClick={() => scrollTo("services")} className="font-mono text-xs uppercase tracking-wider text-gray-400 hover:text-amber-500 transition">01. Services</button>
+          <button onClick={() => scrollTo("realisations")} className="font-mono text-xs uppercase tracking-wider text-gray-400 hover:text-amber-500 transition">02. Réalisations</button>
+          <button onClick={() => scrollTo("tarifs")} className="font-mono text-xs uppercase tracking-wider text-gray-400 hover:text-amber-500 transition">03. Tarifs</button>
           <button onClick={() => scrollTo("contact")} className="bg-amber-500 text-black px-5 py-2 rounded-lg text-sm font-medium hover:bg-amber-400 transition">
             Me contacter
           </button>
