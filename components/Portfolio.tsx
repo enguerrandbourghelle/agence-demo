@@ -49,13 +49,13 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection>
             <TiltCard>
-              <div className="rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50">
-                <div className="relative h-48 border-b border-gray-800">
+              <div className="rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50 group">
+                <div className="relative h-48 border-b border-gray-800 overflow-hidden">
                   <Image
                     src="/adn-constructions.jpg"
                     alt="Site web ADN Constructions"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 </div>
                 <div className="p-6">
