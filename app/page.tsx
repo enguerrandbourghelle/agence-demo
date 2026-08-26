@@ -14,11 +14,12 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
+import MagneticButton from "../components/MagneticButton";
 
 export default function Home() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
+  const btnWrapRef = useRef<HTMLDivElement>(null);
   const [typedText, setTypedText] = useState("");
   const fullText = "// agence web — pour artisans, partout en france";
 
@@ -34,7 +35,7 @@ export default function Home() {
     }, 25);
 
     gsap.fromTo(
-      [subtitleRef.current, btnRef.current],
+      [subtitleRef.current, btnWrapRef.current],
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 1, stagger: 0.2, delay: 1.4, ease: "power3.out" }
     );
@@ -79,9 +80,11 @@ export default function Home() {
             <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
               Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
             </p>
-            <button ref={btnRef} onClick={scrollToContact} className="bg-amber-500 text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-400 transition opacity-0">
-              Demander un devis gratuit
-            </button>
+            <div ref={btnWrapRef} className="opacity-0 inline-block">
+              <MagneticButton onClick={scrollToContact} className="bg-amber-500 text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-400">
+                Demander un devis gratuit
+              </MagneticButton>
+            </div>
           </div>
         </section>
         <PromoOffre />
