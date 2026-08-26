@@ -63,7 +63,7 @@ export default function Home() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const titleWords = ["Des", "sites", "web", "qui", "attirent", "vos"];
+  const titleWords = ["Votre", "activité", "mérite", "d'être"];
 
   return (
     <SmoothScroll>
@@ -85,7 +85,7 @@ export default function Home() {
                   <span key={i} className="word inline-block mr-4 opacity-0">{w}</span>
                 ))}
                 <br />
-                <span className="word inline-block text-amber-500 italic opacity-0">clients</span>
+                <span className="word inline-block text-amber-500 italic opacity-0">vue en ligne.</span>
               </h1>
               <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
                 Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
