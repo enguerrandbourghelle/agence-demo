@@ -6,6 +6,7 @@ import PromoOffre from "../components/PromoOffre";
 import Stats from "../components/Stats";
 import Services from "../components/Services";
 import APropos from "../components/APropos";
+import CodeSignature from "../components/CodeSignature";
 import Portfolio from "../components/Portfolio";
 import Tarifs from "../components/Tarifs";
 import Temoignages from "../components/Temoignages";
@@ -95,6 +96,7 @@ export default function Home() {
           <Stats />
           <Services />
           <APropos />
+          <CodeSignature />
           <Portfolio />
           <Tarifs />
           <Temoignages />
