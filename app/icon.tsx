@@ -13,18 +13,18 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#030712",
+          background: "#0b0c0f",
           borderRadius: 6,
         }}
       >
         <div
           style={{
-            fontSize: 18,
+            fontSize: 24,
             fontWeight: 800,
-            color: "#60a5fa",
+            color: "#f5a523",
           }}
         >
-          AW
+          A
         </div>
       </div>
     ),
