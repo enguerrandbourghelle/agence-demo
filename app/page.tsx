@@ -39,18 +39,18 @@ export default function Home() {
       <div className="relative z-10">
         <Cursor />
         <Navbar />
-        <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
-          <div className="relative z-10 flex flex-col items-center">
-            <p ref={eyebrowRef} className="text-sm font-medium text-gray-400 mb-6 tracking-widest uppercase opacity-0">
-              Agence WebArtisan — France
+        <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden">
+          <div className="relative z-10 max-w-5xl">
+            <p ref={eyebrowRef} className="font-mono text-sm text-amber-500 mb-8 opacity-0">
+              {"// agence web — pour artisans, partout en france"}
             </p>
-            <h1 ref={titleRef} className="text-6xl font-bold mb-6 max-w-4xl leading-tight text-white opacity-0">
-              Des sites web qui attirent vos <span className="text-blue-400">clients</span>
+            <h1 ref={titleRef} className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-[0.95] text-white opacity-0">
+              Des sites web qui<br />attirent vos <span className="text-amber-500 italic">clients</span>
             </h1>
-            <p ref={subtitleRef} className="text-xl text-gray-400 max-w-2xl mb-10 opacity-0">
+            <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
               Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
             </p>
-            <button ref={btnRef} onClick={scrollToContact} className="bg-white text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-gray-100 transition opacity-0">
+            <button ref={btnRef} onClick={scrollToContact} className="bg-amber-500 text-black px-8 py-4 rounded-xl text-lg font-medium hover:bg-amber-400 transition opacity-0">
               Demander un devis gratuit
             </button>
           </div>
