@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Navbar from "../components/Navbar";
 import PromoOffre from "../components/PromoOffre";
@@ -16,22 +16,46 @@ import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
 
 export default function Home() {
-  const eyebrowRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
+  const [typedText, setTypedText] = useState("");
+  const fullText = "// agence web — pour artisans, partout en france";
 
   useEffect(() => {
+    let i = 0;
+    const typing = setInterval(() => {
+      if (i <= fullText.length) {
+        setTypedText(fullText.slice(0, i));
+        i++;
+      } else {
+        clearInterval(typing);
+      }
+    }, 25);
+
     gsap.fromTo(
-      [eyebrowRef.current, titleRef.current, subtitleRef.current, btnRef.current],
+      [subtitleRef.current, btnRef.current],
       { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
+      { opacity: 1, y: 0, duration: 1, stagger: 0.2, delay: 1.4, ease: "power3.out" }
     );
+
+    if (titleRef.current) {
+      const words = titleRef.current.querySelectorAll(".word");
+      gsap.fromTo(
+        words,
+        { opacity: 0, y: 60, rotateX: -40 },
+        { opacity: 1, y: 0, rotateX: 0, duration: 0.9, stagger: 0.08, delay: 1.2, ease: "power4.out" }
+      );
+    }
+
+    return () => clearInterval(typing);
   }, []);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const titleWords = ["Des", "sites", "web", "qui", "attirent", "vos"];
 
   return (
     <main className="min-h-screen relative">
@@ -41,11 +65,16 @@ export default function Home() {
         <Navbar />
         <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden">
           <div className="relative z-10 max-w-5xl">
-            <p ref={eyebrowRef} className="font-mono text-sm text-amber-500 mb-8 opacity-0">
-              {"// agence web — pour artisans, partout en france"}
+            <p className="font-mono text-sm text-amber-500 mb-8 h-5">
+              {typedText}
+              <span className="inline-block w-2 h-4 bg-amber-500 ml-1 animate-pulse" />
             </p>
-            <h1 ref={titleRef} className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-[0.95] text-white opacity-0">
-              Des sites web qui<br />attirent vos <span className="text-amber-500 italic">clients</span>
+            <h1 ref={titleRef} className="font-serif text-6xl md:text-8xl font-bold mb-8 leading-[0.95] text-white" style={{ perspective: 800 }}>
+              {titleWords.map((w, i) => (
+                <span key={i} className="word inline-block mr-4 opacity-0">{w}</span>
+              ))}
+              <br />
+              <span className="word inline-block text-amber-500 italic opacity-0">clients</span>
             </h1>
             <p ref={subtitleRef} className="text-xl text-gray-400 max-w-xl mb-10 opacity-0">
               Je crée des sites modernes, rapides et optimisés pour les artisans et entreprises locales.
