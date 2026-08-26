@@ -18,15 +18,19 @@ import Particles from "../components/Particles";
 import MagneticButton from "../components/MagneticButton";
 import ScrollProgress from "../components/ScrollProgress";
 import SmoothScroll from "../components/SmoothScroll";
+import Preloader from "../components/Preloader";
 
 export default function Home() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const btnWrapRef = useRef<HTMLDivElement>(null);
   const [typedText, setTypedText] = useState("");
+  const [introDone, setIntroDone] = useState(false);
   const fullText = "// agence web — pour artisans, partout en france";
 
   useEffect(() => {
+    if (!introDone) return;
+
     let i = 0;
     const typing = setInterval(() => {
       if (i <= fullText.length) {
@@ -35,7 +39,7 @@ export default function Home() {
       } else {
         clearInterval(typing);
       }
-    }, 25);
+    }, 14);
 
     gsap.fromTo(
       [subtitleRef.current, btnWrapRef.current],
@@ -48,12 +52,12 @@ export default function Home() {
       gsap.fromTo(
         words,
         { opacity: 0, y: 60, rotateX: -40 },
-        { opacity: 1, y: 0, rotateX: 0, duration: 0.9, stagger: 0.08, delay: 1.2, ease: "power4.out" }
+        { opacity: 1, y: 0, rotateX: 0, duration: 0.9, stagger: 0.08, delay: 0.9, ease: "power4.out" }
       );
     }
 
     return () => clearInterval(typing);
-  }, []);
+  }, [introDone]);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -63,6 +67,7 @@ export default function Home() {
 
   return (
     <SmoothScroll>
+      <Preloader onComplete={() => setIntroDone(true)} />
       <main className="min-h-screen relative">
         <Particles />
         <div className="relative z-10">
