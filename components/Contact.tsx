@@ -32,7 +32,8 @@ export default function Contact() {
     <section id="contact" className="py-24 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <AnimatedSection>
-          <h2 className="text-4xl font-bold mb-4 text-white">Parlons de votre projet</h2>
+          <p className="font-mono text-sm text-amber-500 mb-4">{"// contact"}</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">Parlons de votre projet</h2>
           <p className="text-gray-400 mb-12">Devis gratuit sous 24h, sans engagement.</p>
         </AnimatedSection>
         <AnimatedSection>
@@ -47,33 +48,33 @@ export default function Contact() {
                 name="nom"
                 placeholder="Votre nom"
                 required
-                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
+                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-amber-500 transition"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Votre email"
                 required
-                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
+                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-amber-500 transition"
               />
               <input
                 type="tel"
                 name="telephone"
                 placeholder="Votre numéro de téléphone"
                 required
-                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition"
+                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-amber-500 transition"
               />
               <textarea
                 name="message"
                 placeholder="Décrivez votre projet..."
                 rows={5}
                 required
-                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-blue-500 transition resize-none"
+                className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-amber-500 transition resize-none"
               />
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="bg-white text-black py-4 rounded-xl font-medium text-base hover:bg-gray-100 transition disabled:opacity-50"
+                className="bg-amber-500 text-black py-4 rounded-xl font-medium text-base hover:bg-amber-400 transition disabled:opacity-50"
               >
                 {status === "sending" ? "Envoi en cours..." : "Envoyer ma demande"}
               </button>

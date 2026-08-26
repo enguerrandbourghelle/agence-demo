@@ -36,14 +36,14 @@ export default function FAQ() {
     <section className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <AnimatedSection>
-          <p className="text-sm font-medium text-blue-400 mb-4 tracking-widest uppercase text-center">FAQ</p>
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Questions fréquentes</h2>
+          <p className="font-mono text-sm text-amber-500 mb-4 text-center">{"// questions"}</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-16 text-white">Questions fréquentes</h2>
         </AnimatedSection>
         <div className="flex flex-col gap-4">
           {questions.map((item, i) => (
             <AnimatedSection key={i}>
               <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
-                <p className="font-bold text-white mb-3">{item.q}</p>
+                <p className="font-serif font-bold text-white mb-3 text-lg">{item.q}</p>
                 <p className="text-gray-400">{item.r}</p>
               </div>
             </AnimatedSection>
