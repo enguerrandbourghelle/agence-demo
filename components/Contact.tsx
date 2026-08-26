@@ -29,20 +29,30 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        <AnimatedSection>
+    <section id="contact" className="py-24 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <AnimatedSection className="md:col-span-5">
           <p className="font-mono text-sm text-amber-500 mb-4">{"// contact"}</p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">Parlons de votre projet</h2>
-          <p className="text-gray-400 mb-12">Devis gratuit sous 24h, sans engagement.</p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-white">Parlons de votre projet</h2>
+          <p className="text-gray-400 text-lg mb-10">Devis gratuit sous 24h, sans engagement.</p>
+          <div className="flex flex-col gap-6 border-t border-gray-800 pt-8">
+            <div>
+              <p className="font-mono text-amber-500/60 text-xs mb-1">RÉPONSE</p>
+              <p className="text-white">Sous 24h ouvrées</p>
+            </div>
+            <div>
+              <p className="font-mono text-amber-500/60 text-xs mb-1">ZONE</p>
+              <p className="text-white">Partout en France</p>
+            </div>
+          </div>
         </AnimatedSection>
-        <AnimatedSection>
+        <AnimatedSection className="md:col-span-7">
           {status === "success" ? (
             <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-8 text-green-400">
               Merci ! Votre message a bien été envoyé. Je vous réponds sous 24h.
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-left">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
                 type="text"
                 name="nom"
