@@ -1,6 +1,11 @@
+"use client";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const questions = [
     {
       q: "Combien coûte un site web ?",
@@ -40,14 +45,32 @@ export default function FAQ() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-16 text-white">Questions fréquentes</h2>
         </AnimatedSection>
         <div className="flex flex-col gap-4">
-          {questions.map((item, i) => (
-            <AnimatedSection key={i}>
-              <div className="bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
-                <p className="font-serif font-bold text-white mb-3 text-lg">{item.q}</p>
-                <p className="text-gray-400">{item.r}</p>
-              </div>
-            </AnimatedSection>
-          ))}
+          {questions.map((item, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <AnimatedSection key={i}>
+                <div className="bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden">
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                    className="w-full flex items-center justify-between p-8 text-left"
+                  >
+                    <span className="font-serif font-bold text-white text-lg">{item.q}</span>
+                    <ChevronDown
+                      className={`text-amber-500 w-5 h-5 shrink-0 ml-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <div
+                    className="grid transition-all duration-300 ease-out"
+                    style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-gray-400 px-8 pb-8">{item.r}</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>
