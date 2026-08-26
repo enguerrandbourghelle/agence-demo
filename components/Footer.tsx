@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Footer() {
   const scrollTo = (id: string) => {
@@ -31,9 +32,14 @@ export default function Footer() {
           <p className="font-mono text-gray-600 text-xs">
             © 2026 — Enguerrand Bourghelle
           </p>
-          <p className="font-mono text-gray-600 text-xs">
-            Codé avec soin depuis la France
-          </p>
+          <div className="flex items-center gap-6">
+            <Link href="/mentions-legales" className="font-mono text-gray-600 text-xs hover:text-amber-500 transition">
+              Mentions légales
+            </Link>
+            <p className="font-mono text-gray-600 text-xs">
+              Codé avec soin depuis la France
+            </p>
+          </div>
         </div>
       </div>
     </footer>
