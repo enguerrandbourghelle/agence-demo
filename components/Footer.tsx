@@ -36,6 +36,9 @@ export default function Footer() {
             <Link href="/mentions-legales" className="font-mono text-gray-600 text-xs hover:text-amber-500 transition">
               Mentions légales
             </Link>
+            <Link href="/politique-confidentialite" className="font-mono text-gray-600 text-xs hover:text-amber-500 transition">
+              Politique de confidentialité
+            </Link>
             <p className="font-mono text-gray-600 text-xs">
               Codé avec soin depuis la France
             </p>
