@@ -13,3 +13,12 @@ body {
   background: #0b0c0f;
   color: #f5f1ea;
 }
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  a, button {
+    cursor: none;
+  }
+}

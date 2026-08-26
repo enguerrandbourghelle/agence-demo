@@ -2,42 +2,88 @@
 import { useEffect, useRef } from "react";
 
 export default function Cursor() {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const followerRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const cursor = cursorRef.current;
-    const follower = followerRef.current;
-    if (!cursor || !follower) return;
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
 
-    let mouseX = 0;
-    let mouseY = 0;
-    let followerX = 0;
-    let followerY = 0;
-
-    const onMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      cursor.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+      if (dotRef.current) {
+        dotRef.current.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      }
     };
 
-    const animate = () => {
-      followerX += (mouseX - followerX) * 0.1;
-      followerY += (mouseY - followerY) * 0.1;
-      follower.style.transform = `translate(${followerX - 16}px, ${followerY - 16}px)`;
-      requestAnimationFrame(animate);
+    const handleMouseDown = () => {
+      if (ringRef.current) {
+        ringRef.current.style.transform += " scale(0.75)";
+      }
+    };
+    const handleMouseUp = () => {
+      if (ringRef.current) {
+        ringRef.current.style.transform = ringRef.current.style.transform.replace(" scale(0.75)", "");
+      }
     };
 
-    window.addEventListener("mousemove", onMouseMove);
-    animate();
+    const animateRing = () => {
+      ringX += (mouseX - ringX) * 0.15;
+      ringY += (mouseY - ringY) * 0.15;
+      if (ringRef.current) {
+        ringRef.current.style.left = `${ringX}px`;
+        ringRef.current.style.top = `${ringY}px`;
+      }
+      requestAnimationFrame(animateRing);
+    };
 
-    return () => window.removeEventListener("mousemove", onMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
+    animateRing();
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
   }, []);
 
   return (
     <>
-      <div ref={cursorRef} className="fixed top-0 left-0 w-2 h-2 bg-blue-400 rounded-full z-[9999] pointer-events-none" />
-      <div ref={followerRef} className="fixed top-0 left-0 w-8 h-8 border border-blue-400 rounded-full z-[9998] pointer-events-none opacity-60" />
+      <div
+        ref={dotRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: 8,
+          height: 8,
+          backgroundColor: "#f59e0b",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          zIndex: 9999,
+          transform: "translate(-50%, -50%)",
+        }}
+        className="hidden md:block -translate-x-1/2 -translate-y-1/2"
+      />
+      <div
+        ref={ringRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: 40,
+          height: 40,
+          border: "1px solid rgba(245, 158, 11, 0.6)",
+          borderRadius: "50%",
+          pointerEvents: "none",
+          zIndex: 9999,
+          transform: "translate(-50%, -50%)",
+        }}
+        className="hidden md:block"
+      />
     </>
   );
 }
