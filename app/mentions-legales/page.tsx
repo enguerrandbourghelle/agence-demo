@@ -24,7 +24,7 @@ export default function MentionsLegales() {
             <h2 className="font-serif text-xl font-bold text-white mb-3">Éditeur du site</h2>
             <p>
               Ce site est édité par Enguerrand Bourghelle, entrepreneur individuel en cours d&apos;immatriculation.
-              Contact : enguerrand.bourghelle.agence@gmail.com
+              Contact : enguerrand.bourghelle.agence@gmail.com — 06 35 20 52 57
             </p>
           </section>
 
@@ -48,7 +48,7 @@ export default function MentionsLegales() {
             <h2 className="font-serif text-xl font-bold text-white mb-3">Contact</h2>
             <p>
               Pour toute question relative à ce site, vous pouvez me contacter à l&apos;adresse suivante :
-              enguerrand.bourghelle.agence@gmail.com
+              enguerrand.bourghelle.agence@gmail.com — 06 35 20 52 57
             </p>
           </section>
         </div>
