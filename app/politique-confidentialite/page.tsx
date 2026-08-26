@@ -9,7 +9,7 @@ export default function PolitiqueConfidentialite() {
     router.push("/");
     setTimeout(() => {
       document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+    }, 2800);
   };
 
   return (
