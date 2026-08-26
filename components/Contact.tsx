@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
@@ -81,6 +82,20 @@ export default function Contact() {
                 required
                 className="bg-gray-900/50 border border-gray-800 rounded-xl px-5 py-4 text-base text-white placeholder-gray-500 outline-none focus:border-amber-500 transition resize-none"
               />
+              <label className="flex items-start gap-3 text-sm text-gray-400">
+                <input
+                  type="checkbox"
+                  required
+                  className="mt-1 accent-amber-500"
+                />
+                <span>
+                  J&apos;accepte que mes informations soient utilisées pour me recontacter, conformément à la{" "}
+                  <Link href="/politique-confidentialite" className="text-amber-500 hover:text-amber-400 underline">
+                    politique de confidentialité
+                  </Link>
+                  .
+                </span>
+              </label>
               <button
                 type="submit"
                 disabled={status === "sending"}
