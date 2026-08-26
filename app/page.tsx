@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import Particles from "../components/Particles";
 import MagneticButton from "../components/MagneticButton";
+import ScrollProgress from "../components/ScrollProgress";
 
 export default function Home() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -63,6 +64,7 @@ export default function Home() {
       <Particles />
       <div className="relative z-10">
         <Cursor />
+        <ScrollProgress />
         <Navbar />
         <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-16 overflow-hidden">
           <div className="relative z-10 max-w-5xl">
